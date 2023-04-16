@@ -58,7 +58,7 @@ namespace std
 	constexpr bool is_signed_v< ::fixed< T, _Offset > > = std::is_signed_v< T >;
 
 	template < typename T >
-	constexpr bool is_unsigned_v< ::norm< T > > > = std::is_unsigned_v< T >;
+	constexpr bool is_unsigned_v< ::norm< T > > = std::is_unsigned_v< T >;
 	
 	template < typename T >
 	constexpr bool is_signed_v< ::norm< T > > = std::is_signed_v< T >;
