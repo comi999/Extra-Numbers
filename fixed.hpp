@@ -50,6 +50,18 @@ namespace std
 
 	template < typename T >
 	constexpr bool is_integral_v< ::norm< T > > = true;
+
+	template < typename T, size_t _Offset >
+	constexpr bool is_unsigned_v< ::fixed< T, _Offset > > = std::is_unsigned_v< T >;
+
+	template < typename T, size_t _Offset >
+	constexpr bool is_signed_v< ::fixed< T, _Offset > > = std::is_signed_v< T >;
+
+	template < typename T >
+	constexpr bool is_unsigned_v< ::norm< T > > > = std::is_unsigned_v< T >;
+	
+	template < typename T >
+	constexpr bool is_signed_v< ::norm< T > > = std::is_signed_v< T >;
 }
 
 template < typename _Base, size_t _Offset = sizeof( _Base ) * 4u >
